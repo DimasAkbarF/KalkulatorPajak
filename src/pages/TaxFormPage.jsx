@@ -70,7 +70,7 @@ export default function TaxFormPage({ onNavigate }) {
       <button
         type="button"
         onClick={() => onNavigate("/")}
-        className="mb-6 inline-flex items-center text-sm font-medium text-slate-600 transition-colors duration-300 hover:text-blue-800 dark:text-slate-400 dark:hover:text-white"
+        className="mb-6 inline-flex items-center text-sm font-medium text-slate-600 hover:text-blue-800 dark:text-slate-400 dark:hover:text-white"
       >
         ← Kembali ke Beranda
       </button>
@@ -82,7 +82,7 @@ export default function TaxFormPage({ onNavigate }) {
         <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
           Form Penghitungan Pajak
         </h1>
-        <p className="mt-3 text-sm leading-6 text-slate-600 transition-colors duration-500 dark:text-slate-400">
+        <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
           Masukkan data omzet usaha Anda untuk melihat estimasi PPh Final secara otomatis.
         </p>
       </div>

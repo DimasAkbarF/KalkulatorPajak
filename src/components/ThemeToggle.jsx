@@ -49,18 +49,18 @@ export default function ThemeToggle() {
       aria-checked={isDark}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       onClick={toggleTheme}
-      className="relative inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-slate-100 shadow-sm transition-all duration-500 ease-in-out hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-500/10 dark:border-white/10 dark:bg-white/10 dark:focus:ring-white/10"
+      className="relative inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-slate-100 shadow-sm transition-transform duration-300 ease-out hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-500/10 dark:border-white/10 dark:bg-white/10 dark:focus:ring-white/10"
     >
-      <span className="absolute inset-1 rounded-full bg-white shadow-sm transition-all duration-500 ease-in-out dark:bg-slate-950" />
+      <span className="absolute inset-1 rounded-full bg-white shadow-sm dark:bg-slate-950" />
 
       <SunIcon
-        className={`relative z-10 h-[18px] w-[18px] text-amber-500 transition-all duration-500 ease-in-out ${
+        className={`relative z-10 h-[18px] w-[18px] text-amber-500 transition-[opacity,transform] duration-300 ease-out ${
           isDark ? "scale-75 rotate-90 opacity-0" : "scale-100 rotate-0 opacity-100"
         }`}
       />
 
       <MoonIcon
-        className={`absolute z-10 h-[18px] w-[18px] text-slate-100 transition-all duration-500 ease-in-out ${
+        className={`absolute z-10 h-[18px] w-[18px] text-slate-100 transition-[opacity,transform] duration-300 ease-out ${
           isDark ? "scale-100 rotate-0 opacity-100" : "scale-75 -rotate-90 opacity-0"
         }`}
       />

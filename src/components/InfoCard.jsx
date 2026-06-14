@@ -1,6 +1,6 @@
 export default function InfoCard() {
   return (
-    <section className="min-w-0 rounded-3xl border border-blue-100 bg-blue-50 p-5 text-sm leading-6 text-slate-700 shadow-sm transition dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-300 dark:shadow-none">
+    <section className="min-w-0 rounded-3xl border border-blue-100 bg-blue-50 p-5 text-sm leading-6 text-slate-700 shadow-sm dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-300 dark:shadow-none">
       <h2 className="mb-2 text-sm font-semibold text-blue-900 dark:text-white">Catatan Perhitungan</h2>
       <p>
         Catatan: Kalkulator ini hanya membantu memberikan estimasi perhitungan berdasarkan data yang

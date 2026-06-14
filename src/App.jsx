@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
-import Footer from "./components/Footer";
+import { lazy, Suspense, useEffect, useState } from "react";
 import Header from "./components/Header";
+import LazyOnVisible from "./components/LazyOnVisible";
 import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
-import TaxFormPage from "./pages/TaxFormPage";
+
+const Footer = lazy(() => import("./components/Footer"));
+const TaxFormPage = lazy(() => import("./pages/TaxFormPage"));
 
 function getPageFromPath() {
   return window.location.pathname === "/form-pajak" ? "form" : "home";
@@ -47,8 +49,26 @@ export default function App() {
   return (
     <Layout>
       <Header currentPage={page} onNavigate={navigate} />
-      {page === "form" ? <TaxFormPage onNavigate={navigate} /> : <HomePage onNavigate={navigate} />}
-      <Footer onNavigate={navigate} />
+      {page === "form" ? (
+        <Suspense
+          fallback={
+            <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+              <div className="rounded-3xl border border-slate-200 bg-white p-6 text-sm text-slate-600 shadow-sm dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-400">
+                Memuat form penghitungan pajak...
+              </div>
+            </section>
+          }
+        >
+          <TaxFormPage onNavigate={navigate} />
+        </Suspense>
+      ) : (
+        <HomePage onNavigate={navigate} />
+      )}
+      <LazyOnVisible minHeight={180} rootMargin="200px">
+        <Suspense fallback={null}>
+          <Footer onNavigate={navigate} />
+        </Suspense>
+      </LazyOnVisible>
     </Layout>
   );
 }

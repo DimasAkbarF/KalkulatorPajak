@@ -24,7 +24,7 @@ export default function UsageGuide() {
         {steps.map((step, index) => (
           <div
             key={step}
-            className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition-colors duration-500 dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none"
+            className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none"
           >
             <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-blue-50 text-sm font-bold text-blue-800 dark:bg-blue-400/10 dark:text-blue-200">
               {index + 1}

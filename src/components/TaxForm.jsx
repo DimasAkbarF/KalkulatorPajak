@@ -2,7 +2,7 @@ import { BATAS_OMZET, BULAN, JENIS_LABEL, PTKP_OMZET, TARIF_PPH } from "../utils
 import { formatCurrency, formatNumberInput, parseCurrency } from "../utils/formatCurrency";
 
 const inputClass =
-  "w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-700 focus:ring-4 focus:ring-blue-100 dark:border-white/10 dark:bg-white/[0.04] dark:text-white dark:placeholder:text-slate-500 dark:focus:border-blue-400 dark:focus:ring-blue-400/10";
+  "w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-blue-700 focus:ring-4 focus:ring-blue-100 dark:border-white/10 dark:bg-white/[0.04] dark:text-white dark:placeholder:text-slate-500 dark:focus:border-blue-400 dark:focus:ring-blue-400/10";
 const labelClass = "mb-2 block text-sm font-medium text-slate-700 dark:text-slate-300";
 
 function CurrencyInput({ value, onChange, placeholder = "0" }) {
@@ -26,7 +26,7 @@ function CurrencyInput({ value, onChange, placeholder = "0" }) {
 function RadioCard({ name, value, checked, onChange, children }) {
   return (
     <label
-      className={`cursor-pointer rounded-xl border px-4 py-3 text-sm font-medium transition ${
+      className={`cursor-pointer rounded-xl border px-4 py-3 text-sm font-medium ${
         checked
           ? "border-blue-700 bg-blue-50 text-blue-900 dark:border-blue-400/40 dark:bg-blue-400/10 dark:text-blue-100"
           : "border-slate-200 bg-white text-slate-600 hover:border-blue-200 dark:border-white/10 dark:bg-white/[0.03] dark:text-slate-300 dark:hover:border-white/20"
@@ -68,7 +68,7 @@ export default function TaxForm({ formData, setFormData, result, onCalculate, on
   return (
     <form
       onSubmit={onCalculate}
-      className="min-w-0 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none sm:p-6"
+      className="min-w-0 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none sm:p-6"
     >
       <div className="mb-6">
         <h2 className="text-lg font-semibold text-slate-900 dark:text-white">Data Penghitungan Pajak</h2>
@@ -304,7 +304,7 @@ export default function TaxForm({ formData, setFormData, result, onCalculate, on
         </div>
         <div className="h-2 overflow-hidden rounded-full bg-slate-200 dark:bg-white/10">
           <div
-            className={`h-full rounded-full transition-all duration-300 ${progress > 80 ? "bg-rose-500" : "bg-blue-700"}`}
+            className={`h-full rounded-full ${progress > 80 ? "bg-rose-500" : "bg-blue-700"}`}
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -323,14 +323,14 @@ export default function TaxForm({ formData, setFormData, result, onCalculate, on
       <div className="mt-6 flex flex-col gap-3 sm:flex-row">
         <button
           type="submit"
-          className="rounded-xl bg-blue-800 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-900 focus:outline-none focus:ring-4 focus:ring-blue-100 dark:bg-white dark:text-slate-950 dark:hover:bg-slate-200 dark:focus:ring-white/20"
+          className="rounded-xl bg-blue-800 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-900 focus:outline-none focus:ring-4 focus:ring-blue-100 dark:bg-white dark:text-slate-950 dark:hover:bg-slate-200 dark:focus:ring-white/20"
         >
           Hitung Pajak
         </button>
         <button
           type="button"
           onClick={onReset}
-          className="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50 dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-200 dark:hover:bg-white/[0.08]"
+          className="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 hover:border-slate-400 hover:bg-slate-50 dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-200 dark:hover:bg-white/[0.08]"
         >
           Reset Form
         </button>

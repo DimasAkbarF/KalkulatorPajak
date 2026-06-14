@@ -41,7 +41,7 @@ export default function FAQSection() {
           return (
             <div
               key={item.question}
-              className="rounded-3xl border border-slate-200 bg-white shadow-sm transition-colors duration-500 dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none"
+              className="rounded-3xl border border-slate-200 bg-white shadow-sm dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none"
             >
               <button
                 type="button"

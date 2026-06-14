@@ -3,7 +3,7 @@ import { formatCurrency, formatCurrencyShort } from "../utils/formatCurrency";
 
 function SummaryItem({ label, value, detail, emphasize }) {
   return (
-    <div className="min-w-0 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none">
+    <div className="min-w-0 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none">
       <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">{label}</p>
       <p className={`mt-2 text-xl font-bold ${emphasize ? "text-blue-900 dark:text-blue-200" : "text-slate-900 dark:text-white"}`}>
         {value}
@@ -16,7 +16,7 @@ function SummaryItem({ label, value, detail, emphasize }) {
 export default function ResultCard({ formData, result, onPrint }) {
   if (!result?.data) {
     return (
-      <section className="min-w-0 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none">
+      <section className="min-w-0 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none">
         <h2 className="text-lg font-semibold text-slate-900 dark:text-white">Hasil Perhitungan</h2>
         <p className="mt-2 text-sm leading-6 text-slate-500 dark:text-slate-400">
           Hasil akan muncul setelah data pajak dan omzet dihitung.
@@ -33,7 +33,7 @@ export default function ResultCard({ formData, result, onPrint }) {
 
   return (
     <section className="min-w-0 space-y-5">
-      <div className="min-w-0 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none">
+      <div className="min-w-0 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none">
         <div className="mb-5">
           <h2 className="text-lg font-semibold text-slate-900 dark:text-white">Hasil Perhitungan Pajak</h2>
           <p className="mt-1 text-sm leading-6 text-slate-500 dark:text-slate-400">{subtitle}</p>
@@ -90,7 +90,7 @@ export default function ResultCard({ formData, result, onPrint }) {
           </div>
           <div className="h-2 overflow-hidden rounded-full bg-slate-200 dark:bg-white/10">
             <div
-              className={`h-full rounded-full transition-all duration-300 ${progress > 80 ? "bg-rose-500" : "bg-blue-700"}`}
+              className={`h-full rounded-full ${progress > 80 ? "bg-rose-500" : "bg-blue-700"}`}
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -172,7 +172,7 @@ export default function ResultCard({ formData, result, onPrint }) {
           <button
             type="button"
             onClick={onPrint}
-            className="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50 dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-200 dark:hover:bg-white/[0.08]"
+            className="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 hover:border-slate-400 hover:bg-slate-50 dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-200 dark:hover:bg-white/[0.08]"
           >
             Cetak / PDF
           </button>
