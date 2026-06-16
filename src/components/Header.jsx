@@ -28,9 +28,9 @@ export default function Header({ currentPage, onNavigate }) {
           />
           <div className="min-w-0">
             <div className="truncate text-sm font-bold text-slate-900 dark:text-white">
-              Kalkulator Pajak UMKM
+              TIRTAX
             </div>
-            <div className="text-xs font-medium text-slate-500 dark:text-slate-400">PPh Final 0,5%</div>
+            <div className="text-xs font-medium text-slate-500 dark:text-slate-400">Kalkulator Pajak UMKM</div>
           </div>
         </a>
 

@@ -16,36 +16,38 @@ export default function HeroSection({ onStart }) {
         </div>
 
         <h1 className="mx-auto mt-7 max-w-4xl text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl dark:text-white">
-          Kalkulator Pajak UMKM Final
+          Kalkulator Pajak UMKM 
         </h1>
         <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-slate-600 sm:text-lg dark:text-slate-400">
           Hitung estimasi PPh Final UMKM 0,5% secara mudah, cepat, dan rapi berdasarkan data omzet
           yang Anda masukkan.
         </p>
 
-        <div className="mx-auto mt-10 grid w-full max-w-md grid-cols-2 gap-4 sm:max-w-3xl sm:grid-cols-3 lg:max-w-4xl">
-          {stats.map((item, index) => (
-            <div
-              key={item.label}
-              className={`rounded-3xl border border-slate-200 bg-white/85 p-4 text-left shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none sm:p-5 ${
-                index === 2 ? "col-span-2 mx-auto w-full max-w-[220px] sm:col-span-1 sm:max-w-none" : ""
-              }`}
-            >
-              <div className="text-2xl font-bold text-slate-900 dark:text-white">{item.value}</div>
-              <div className="mt-2 text-xs leading-5 text-slate-600 dark:text-slate-400">{item.label}</div>
-            </div>
-          ))}
-        </div>
+        <div className="mx-auto mt-10 w-full max-w-md sm:max-w-3xl lg:max-w-4xl">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+            {stats.map((item, index) => (
+              <div
+                key={item.label}
+                className={`rounded-3xl border border-slate-200 bg-white/85 p-4 text-left shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none sm:p-5 ${
+                  index === 2 ? "col-span-2 mx-auto w-full max-w-[220px] sm:col-span-1 sm:max-w-none" : ""
+                }`}
+              >
+                <div className="text-2xl font-bold text-slate-900 dark:text-white">{item.value}</div>
+                <div className="mt-2 text-xs leading-5 text-slate-600 dark:text-slate-400">{item.label}</div>
+              </div>
+            ))}
+          </div>
 
-        <div className="mt-9 flex flex-col items-center gap-3">
-          <button
-            type="button"
-            onClick={onStart}
-            className="inline-flex items-center justify-center rounded-xl bg-blue-800 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-transform duration-300 ease-out hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-blue-100 dark:bg-white dark:text-slate-950 dark:hover:bg-slate-200 dark:focus:ring-white/20"
-          >
-            Mulai Hitung Pajak
-          </button>
-          <p className="text-xs font-medium text-slate-500 dark:text-slate-500">
+          <div className="mt-8 flex justify-center">
+            <button
+              type="button"
+              onClick={onStart}
+              className="inline-flex min-h-12 w-full max-w-[220px] items-center justify-center rounded-xl bg-blue-800 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-transform duration-300 ease-out hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-blue-100 dark:bg-white dark:text-slate-950 dark:hover:bg-slate-200 dark:focus:ring-white/20"
+            >
+              Mulai Hitung Pajak
+            </button>
+          </div>
+          <p className="mt-4 text-center text-xs font-medium text-slate-500 dark:text-slate-400">
             Gratis digunakan • Tanpa login • Data tidak tersimpan
           </p>
         </div>
