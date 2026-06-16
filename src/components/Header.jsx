@@ -1,3 +1,4 @@
+import brandMark from "../assets/brand-mark.webp?inline";
 import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
@@ -17,10 +18,8 @@ export default function Header({ currentPage, onNavigate }) {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <a href="/" onClick={(event) => handleNavigate(event, navItems[0])} className="flex min-w-0 items-center gap-3">
           <img
-            src="/assets/untirta-logo-96.webp"
-            srcSet="/assets/untirta-logo-48.webp 48w, /assets/untirta-logo-96.webp 96w"
-            sizes="(min-width: 640px) 48px, 40px"
-            alt="Logo UNTIRTA"
+            src={brandMark}
+            alt="Brand Logo"
             width="48"
             height="48"
             decoding="async"
