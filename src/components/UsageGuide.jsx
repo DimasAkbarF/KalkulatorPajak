@@ -11,7 +11,7 @@ export default function UsageGuide() {
   return (
     <section
       id="cara-penggunaan"
-      className="border-t border-slate-200/70 bg-slate-50 px-4 py-20 dark:border-white/10 dark:bg-[#020617] sm:px-6 sm:py-24 lg:px-8 lg:py-28"
+      className="animate-fade-up border-t border-slate-200/70 bg-slate-50 px-4 py-20 dark:border-white/10 dark:bg-[#020617] sm:px-6 sm:py-24 lg:px-8 lg:py-28"
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-10 max-w-2xl">
@@ -28,7 +28,7 @@ export default function UsageGuide() {
           {steps.map((step, index) => (
             <div
               key={step}
-              className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none"
+              className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-md dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none"
             >
               <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-blue-50 text-sm font-bold text-blue-800 dark:bg-blue-400/10 dark:text-blue-200">
                 {index + 1}

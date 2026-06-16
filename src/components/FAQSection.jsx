@@ -27,7 +27,7 @@ export default function FAQSection() {
   return (
     <section
       id="faq"
-      className="border-t border-slate-200/70 bg-white px-4 py-20 dark:border-white/10 dark:bg-black sm:px-6 sm:py-24 lg:px-8 lg:py-28"
+      className="animate-fade-up border-t border-slate-200/70 bg-white px-4 py-20 dark:border-white/10 dark:bg-black sm:px-6 sm:py-24 lg:px-8 lg:py-28"
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-10 max-w-2xl">
@@ -45,7 +45,7 @@ export default function FAQSection() {
             return (
               <div
                 key={item.question}
-                className="rounded-3xl border border-slate-200 bg-white shadow-sm dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none"
+                className="rounded-3xl border border-slate-200 bg-white shadow-sm transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-md dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none"
               >
                 <button
                   type="button"

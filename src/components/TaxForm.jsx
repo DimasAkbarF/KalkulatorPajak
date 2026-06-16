@@ -26,7 +26,7 @@ function CurrencyInput({ value, onChange, placeholder = "0" }) {
 function RadioCard({ name, value, checked, onChange, children }) {
   return (
     <label
-      className={`cursor-pointer rounded-xl border px-4 py-3 text-sm font-medium ${
+      className={`cursor-pointer rounded-xl border px-4 py-3 text-sm font-medium transition-transform duration-300 ease-out hover:-translate-y-0.5 ${
         checked
           ? "border-blue-700 bg-blue-50 text-blue-900 dark:border-blue-400/40 dark:bg-blue-400/10 dark:text-blue-100"
           : "border-slate-200 bg-white text-slate-600 hover:border-blue-200 dark:border-white/10 dark:bg-white/[0.03] dark:text-slate-300 dark:hover:border-white/20"
@@ -323,14 +323,14 @@ export default function TaxForm({ formData, setFormData, result, onCalculate, on
       <div className="mt-6 flex flex-col gap-3 sm:flex-row">
         <button
           type="submit"
-          className="rounded-xl bg-blue-800 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-900 focus:outline-none focus:ring-4 focus:ring-blue-100 dark:bg-white dark:text-slate-950 dark:hover:bg-slate-200 dark:focus:ring-white/20"
+          className="rounded-xl bg-blue-800 px-5 py-3 text-sm font-semibold text-white transition-transform duration-300 ease-out hover:-translate-y-0.5 hover:bg-blue-900 active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-blue-100 dark:bg-white dark:text-slate-950 dark:hover:bg-slate-200 dark:focus:ring-white/20"
         >
           Hitung Pajak
         </button>
         <button
           type="button"
           onClick={onReset}
-          className="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 hover:border-slate-400 hover:bg-slate-50 dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-200 dark:hover:bg-white/[0.08]"
+          className="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition-transform duration-300 ease-out hover:-translate-y-0.5 hover:border-slate-400 hover:bg-slate-50 active:scale-[0.98] dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-200 dark:hover:bg-white/[0.08]"
         >
           Reset Form
         </button>

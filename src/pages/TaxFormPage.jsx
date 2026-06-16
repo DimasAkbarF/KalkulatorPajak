@@ -66,12 +66,12 @@ export default function TaxFormPage({ onNavigate }) {
   }
 
   return (
-    <section className="min-h-[calc(100svh-72px)] px-4 py-16 sm:px-6 sm:py-20 lg:min-h-[calc(100vh-76px)] lg:px-8 lg:py-24">
+    <section className="animate-fade-up min-h-[calc(100svh-72px)] px-4 py-16 sm:px-6 sm:py-20 lg:min-h-[calc(100vh-76px)] lg:px-8 lg:py-24">
       <div className="mx-auto max-w-6xl">
         <button
           type="button"
           onClick={() => onNavigate("/")}
-          className="mb-8 inline-flex items-center text-sm font-medium text-slate-600 hover:text-blue-800 dark:text-slate-400 dark:hover:text-white"
+          className="mb-8 inline-flex items-center text-sm font-medium text-slate-600 transition-transform duration-300 ease-out hover:-translate-y-0.5 hover:text-blue-800 active:scale-[0.98] dark:text-slate-400 dark:hover:text-white"
         >
           ← Kembali ke Beranda
         </button>
