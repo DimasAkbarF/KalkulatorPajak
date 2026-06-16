@@ -23,14 +23,16 @@ export default function HeroSection({ onStart }) {
           yang Anda masukkan.
         </p>
 
-        <div className="mx-auto mt-9 grid max-w-4xl gap-4 sm:grid-cols-3">
-          {stats.map((item) => (
+        <div className="mx-auto mt-10 grid w-full max-w-md grid-cols-2 gap-4 sm:max-w-3xl sm:grid-cols-3 lg:max-w-4xl">
+          {stats.map((item, index) => (
             <div
               key={item.label}
-              className="rounded-3xl border border-slate-200 bg-white/85 p-5 text-left shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none"
+              className={`rounded-3xl border border-slate-200 bg-white/85 p-4 text-left shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none sm:p-5 ${
+                index === 2 ? "col-span-2 mx-auto w-full max-w-[220px] sm:col-span-1 sm:max-w-none" : ""
+              }`}
             >
-              <div className="text-2xl font-bold text-blue-900 dark:text-white">{item.value}</div>
-              <div className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">{item.label}</div>
+              <div className="text-2xl font-bold text-slate-900 dark:text-white">{item.value}</div>
+              <div className="mt-2 text-xs leading-5 text-slate-600 dark:text-slate-400">{item.label}</div>
             </div>
           ))}
         </div>
