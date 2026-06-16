@@ -8,9 +8,9 @@ export default function HeroSection({ onStart }) {
   return (
     <section
       id="beranda"
-      className="relative overflow-hidden border-b border-slate-200/70 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.10),transparent_34%),linear-gradient(to_bottom,#f8fafc,#f1f5f9)] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 dark:border-white/10 dark:bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.18),transparent_35%),linear-gradient(to_bottom,#020617,#000000)]"
+      className="relative flex min-h-[calc(100svh-72px)] items-center overflow-hidden border-b border-slate-200/70 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.10),transparent_34%),linear-gradient(to_bottom,#f8fafc,#f1f5f9)] px-4 py-20 dark:border-white/10 dark:bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.18),transparent_35%),linear-gradient(to_bottom,#020617,#000000)] sm:px-6 sm:py-24 lg:min-h-[calc(100vh-76px)] lg:px-8 lg:py-28"
     >
-      <div className="mx-auto max-w-6xl text-center">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-center text-center">
         <div className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-xs font-semibold text-blue-800 shadow-sm dark:border-blue-400/20 dark:bg-blue-400/10 dark:text-blue-200 dark:shadow-none">
           PPh Final UMKM • Estimasi Perhitungan • Siap Digunakan
         </div>

@@ -12,7 +12,7 @@ export default function Footer({ onNavigate }) {
   }
 
   return (
-    <footer className="border-t border-slate-200 bg-white/70 px-4 py-10 dark:border-white/10 dark:bg-black/40 sm:px-6 lg:px-8">
+    <footer className="border-t border-slate-200 bg-white px-4 py-12 dark:border-white/10 dark:bg-black sm:px-6 sm:py-14 lg:px-8">
       <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[1.5fr_1fr]">
         <div>
           <h2 className="text-base font-bold text-slate-950 dark:text-white">Kalkulator Pajak UMKM</h2>

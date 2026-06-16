@@ -66,39 +66,41 @@ export default function TaxFormPage({ onNavigate }) {
   }
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
-      <button
-        type="button"
-        onClick={() => onNavigate("/")}
-        className="mb-6 inline-flex items-center text-sm font-medium text-slate-600 hover:text-blue-800 dark:text-slate-400 dark:hover:text-white"
-      >
-        ← Kembali ke Beranda
-      </button>
+    <section className="min-h-[calc(100svh-72px)] px-4 py-16 sm:px-6 sm:py-20 lg:min-h-[calc(100vh-76px)] lg:px-8 lg:py-24">
+      <div className="mx-auto max-w-6xl">
+        <button
+          type="button"
+          onClick={() => onNavigate("/")}
+          className="mb-8 inline-flex items-center text-sm font-medium text-slate-600 hover:text-blue-800 dark:text-slate-400 dark:hover:text-white"
+        >
+          ← Kembali ke Beranda
+        </button>
 
-      <div className="mb-8 max-w-2xl">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-800 dark:text-blue-200">
-          Form Pajak
-        </p>
-        <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
-          Form Penghitungan Pajak
-        </h1>
-        <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-          Masukkan data omzet usaha Anda untuk melihat estimasi PPh Final secara otomatis.
-        </p>
-      </div>
+        <div className="mb-10 max-w-2xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-800 dark:text-blue-200">
+            Form Pajak
+          </p>
+          <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
+            Form Penghitungan Pajak
+          </h1>
+          <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+            Masukkan data omzet usaha Anda untuk melihat estimasi PPh Final secara otomatis.
+          </p>
+        </div>
 
-      <div className="grid min-w-0 gap-6 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
-        <TaxForm
-          formData={formData}
-          setFormData={setFormData}
-          result={result}
-          onCalculate={handleCalculate}
-          onReset={handleReset}
-        />
-        <aside id="hasil-pajak" className="min-w-0 space-y-6">
-          <ResultCard formData={normalizedFormData} result={result} onPrint={() => window.print()} />
-          <InfoCard />
-        </aside>
+        <div className="grid min-w-0 gap-6 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
+          <TaxForm
+            formData={formData}
+            setFormData={setFormData}
+            result={result}
+            onCalculate={handleCalculate}
+            onReset={handleReset}
+          />
+          <aside id="hasil-pajak" className="min-w-0 space-y-6">
+            <ResultCard formData={normalizedFormData} result={result} onPrint={() => window.print()} />
+            <InfoCard />
+          </aside>
+        </div>
       </div>
     </section>
   );
