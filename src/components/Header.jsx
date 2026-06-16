@@ -1,4 +1,4 @@
-import brandMark from "../assets/brand-mark.webp?inline";
+import logoUntirta from "../assets/untirta-logo.webp?inline";
 import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
@@ -18,12 +18,12 @@ export default function Header({ currentPage, onNavigate }) {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <a href="/" onClick={(event) => handleNavigate(event, navItems[0])} className="flex min-w-0 items-center gap-3">
           <img
-            src={brandMark}
-            alt="Brand Logo"
-            width="48"
-            height="48"
+            src={logoUntirta}
+            alt="Logo UNTIRTA"
+            width="56"
+            height="56"
             decoding="async"
-            className="h-10 w-10 shrink-0 object-contain sm:h-12 sm:w-12"
+            className="h-11 w-11 shrink-0 object-contain sm:h-14 sm:w-14"
           />
           <div className="min-w-0">
             <div className="truncate text-sm font-bold text-slate-900 dark:text-white">D3 Administrasi Pajak</div>
