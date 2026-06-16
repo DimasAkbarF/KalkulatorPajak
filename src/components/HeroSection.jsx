@@ -16,11 +16,11 @@ export default function HeroSection({ onStart }) {
         </div>
 
         <h1 className="mx-auto mt-7 max-w-4xl text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl dark:text-white">
-          Kalkulator Pajak UMKM 
+          <span className="block">TIRTAX</span>
+          <span className="mt-2 block text-3xl sm:text-4xl lg:text-5xl">KALKULATOR PAJAK UMKM</span>
         </h1>
         <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-slate-600 sm:text-lg dark:text-slate-400">
-          Hitung estimasi PPh Final UMKM 0,5% secara mudah, cepat, dan rapi berdasarkan data omzet
-          yang Anda masukkan.
+          Dapatkan estimasi PPh Final UMKM 0,5% secara cepat, praktis, dan akurat berdasarkan omzet usaha.
         </p>
 
         <div className="mx-auto mt-10 w-full max-w-md sm:max-w-3xl lg:max-w-4xl">

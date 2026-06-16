@@ -26,9 +26,7 @@ export default function Header({ currentPage, onNavigate }) {
             className="h-10 w-10 shrink-0 object-contain sm:h-12 sm:w-12"
           />
           <div className="min-w-0">
-            <div className="truncate text-sm font-bold text-slate-900 dark:text-white">
-              TIRTAX
-            </div>
+            <div className="truncate text-sm font-bold text-slate-900 dark:text-white">D3 Administrasi Pajak</div>
             <div className="text-xs font-medium text-slate-500 dark:text-slate-400">Kalkulator Pajak UMKM</div>
           </div>
         </a>
